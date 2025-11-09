@@ -4,15 +4,36 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:testUI": "gulp -f packages/components/script/build/index.ts",
+    "publish:testUI": "pnpm run build:testUI && pnpm publish packages/testUI --no-git-checks",
+    "play": "pnpm --filter play dev",
+    "docs": "pnpm --filter site dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "vue-tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "devDependencies": {
+    "@types/gulp": "^4.0.18",
+    "@types/gulp-autoprefixer": "^0.0.37",
+    "@types/gulp-less": "^0.0.36",
+    "@types/node": "^24.10.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
+    "gulp-less": "^5.0.0",
     "less": "^4.4.2",
+    "sucrase": "^3.35.0",
     "typescript": "^5.9.3",
-    "vue": "3.4.27"
+    "unplugin-vue-define-options": "^3.1.1",
+    "vite": "^7.2.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "3.4.27",
+    "vue-tsc": "^3.1.3"
+  },
+  "dependencies": {
+    "element-plus": "^2.11.7"
   }
 }
