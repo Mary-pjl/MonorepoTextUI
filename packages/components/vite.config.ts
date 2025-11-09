@@ -45,8 +45,8 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      entryRoot: "./src",
-      outDir: ["../testUI/es/src", "../testUI/lib/src"],
+      entryRoot: ".",
+      outDir: ["../testUI/es", "../testUI/lib"],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsconfigPath: "../../tsconfig.json",
     }),
