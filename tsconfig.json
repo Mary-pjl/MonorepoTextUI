@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",                   // 设置模块解析的基本目录，"." 表示当前目录。
+    "jsx": "preserve",                 // JSX 语法保留，不做编译时转换，通常用于 Vue 中。
+    "strict": true,                    // 启用 TypeScript 严格模式，确保更严密的类型检查。
+    "target": "ES2015",                // 将 TypeScript 编译为 ES2015 标准（ES6）兼容的代码。
+    "module": "ESNext",                // 生成 ESNext 模块，支持最新的 JavaScript 模块标准。
+    "skipLibCheck": true,              // 跳过库文件的类型检查，可能提高编译速度。
+    "esModuleInterop": true,           // 允许默认导入非 ES 模块，通常为 CommonJS 模块。
+    "moduleResolution": "Node",        // 使用 Node.js 风格的模块解析机制。
+    "lib": ["esnext", "dom"],          // 包含最新的 ECMAScript 和 DOM 的类型定义。
+    "resolveJsonModule": true,         // 允许从 JSON 文件中导入内容。
+    "types": ["unplugin-vue-define-options/macros-global"] // 为宏函数和插件提供全局类型支持，特别是 Vue 相关插件。
+  }
+}
