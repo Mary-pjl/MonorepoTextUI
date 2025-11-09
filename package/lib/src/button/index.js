@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("../../utils/index.js"),u=require("./index.vue.js"),e=t.withInstall(u.default);exports.MButton=e;exports.default=e;
